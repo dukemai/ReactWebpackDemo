@@ -1,203 +1,231 @@
-# React Static Boilerplate &nbsp; [![Build Status](http://img.shields.io/travis/kriasoft/react-static-boilerplate/master.svg?style=flat-square)](https://travis-ci.org/kriasoft/react-static-boilerplate) [![To-do](https://img.shields.io/waffle/label/kriasoft/react-static-boilerplate/to-do.svg?style=flat-square)](https://waffle.io/kriasoft/react-static-boilerplate) [![Online Chat](http://img.shields.io/badge/chat_room-%23react--static--boilerplate-blue.svg?style=flat-square)](https://gitter.im/kriasoft/react-static-boilerplate)
+## React Starter Kit — "[isomorphic](http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/)" web app boilerplate &nbsp; <a href="https://github.com/kriasoft/react-starter-kit/stargazers"><img src="https://img.shields.io/github/stars/kriasoft/react-starter-kit.svg?style=social&label=Star&maxAge=3600" height="20"></a> <a href="https://twitter.com/ReactStarter"><img src="https://img.shields.io/twitter/follow/ReactStarter.svg?style=social&label=Follow&maxAge=3600" height="20"></a>
 
-> [**React Static Boilerplate**](https://github.com/kriasoft/react-static-boilerplate) (RSB) is an
-> opinionated boilerplate and tooling for creating modern stand-alone web applications (aka
-> [SPA](https://en.wikipedia.org/wiki/Single-page_application)s) for a serverless architecture. RSB
-> significantly reduces cost by eliminating the need for servers such as EC2 instances because the
-> entire site can be hosted directly from CDN ([Firebase](https://www.firebase.com/), [GitHub
-> Pages](https://pages.github.com/), [Amazon S3](http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html),
-> or other similar cloud storage). Sites built with RSB cab be fully functional with REST API or
-> GraphQL calls to micro-services such as [Amazon Lambda](https://aws.amazon.com/lambda/),
-> [Azure Functions](https://azure.microsoft.com/services/functions/), or dynamic Docker endpoints
-> hosted on [DigitalOcean](https://www.digitalocean.com/?refcode=eef302dbae9f&utm_source=github&utm_medium=oss_sponsorships&utm_campaign=opencollective).
-> RSB demonstrates how to use component-based UI development approach with best of breed
-> technologies including [React](http://facebook.github.io/react/), [Redux](http://redux.js.org/),
-> [Babel](http://babeljs.io/), [Webpack](https://webpack.github.io/), [Browsersync](https://browsersync.io/),
-> [React Hot Loader](http://gaearon.github.io/react-hot-loader/) and more.
+[React Starter Kit](https://www.reactstarterkit.com) is an opinionated boilerplate for web
+development built on top of [Node.js](https://nodejs.org/),
+[Express](http://expressjs.com/), [GraphQL](http://graphql.org/) and
+[React](https://facebook.github.io/react/), containing modern web development
+tools such as [Webpack](http://webpack.github.io/), [Babel](http://babeljs.io/)
+and [Browsersync](http://www.browsersync.io/). Helping you to stay productive
+following the best practices. A solid starting point for both professionals
+and newcomers to the industry.
 
-**The work is being sponsored by:**
+**See** [getting started guide](./docs/getting-started.md), [demo][demo],
+[docs](https://github.com/kriasoft/react-starter-kit/tree/master/docs),
+[roadmap](https://github.com/kriasoft/react-starter-kit/projects/1) &nbsp;|&nbsp;
+**Join** [#react-starter-kit][chat] chat room on Gitter &nbsp;|&nbsp;
+**Visit our sponsors**:<br><br>
 
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/0/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/0/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/1/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/1/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/2/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/2/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/3/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/3/avatar.svg" height="64">
-</a> &nbsp;
-<a href="https://opencollective.com/react-static-boilerplate/sponsor/4/website" target="_blank">
-  <img src="https://opencollective.com/react-static-boilerplate/sponsor/4/avatar.svg" height="64">
-</a>
-
-
-### Features
-
-&nbsp; &nbsp; ✓ Modern JavaScript syntax ([ES2015](http://babeljs.io/docs/learn-es2015/)+) via [Babel](http://babeljs.io/), modern CSS syntax via [PostCSS](https://github.com/postcss/postcss)<br>
-&nbsp; &nbsp; ✓ Component-based UI architecture via [React](http://facebook.github.io/react/), [Webpack](https://webpack.github.io/) and [CSS Modules](https://github.com/css-modules/css-modules)<br>
-&nbsp; &nbsp; ✓ Application state management /w time-travel debugging via [Redux](http://redux.js.org/) (see [`main.js`](main.js), [`core/store.js`](core/store.js))<br>
-&nbsp; &nbsp; ✓ Routing and navigation via [`path-to-regexp`](https://github.com/pillarjs/path-to-regexp) and [`history`](https://github.com/mjackson/history) (see [`main.js`](main.js), [`core/router.js`](core/router.js), [`utils/routes-loader.js`](utils/routes-loader.js))<br>
-&nbsp; &nbsp; ✓ [Code-splitting](https://github.com/webpack/docs/wiki/code-splitting) and async chunk loading via [Webpack](https://webpack.github.io/) and [ES6 System.import()](http://www.2ality.com/2014/09/es6-modules-final.html)<br>
-&nbsp; &nbsp; ✓ Hot Module Replacement ([HMR](https://webpack.github.io/docs/hot-module-replacement.html)) /w [React Hot Loader](http://gaearon.github.io/react-hot-loader/)<br>
-&nbsp; &nbsp; ✓ Cross-device testing with [Browsersync](https://browsersync.io/) (see [`run.js#start`](run.js))<br>
-&nbsp; &nbsp; ✓ **24/7** community support on [Gitter](https://gitter.im/kriasoft/react-static-boilerplate); customization requests on [Codementor](https://www.codementor.io/koistya)<br>
-
-**Demo**: https://rsb.kriasoft.com &nbsp;|&nbsp; **View** [docs](./docs) &nbsp;|&nbsp; **Follow us** on
-[Gitter](https://gitter.im/kriasoft/react-static-boilerplate), [Twitter](https://twitter.com/ReactStatic),
-or [ProductHunt](https://www.producthunt.com/tech/react-static-boilerplate) &nbsp;|&nbsp;
-**Send feedback** to [@koistya](https://twitter.com/koistya)
-
-
-### Directory Layout
-
-```shell
-.
-├── /components/                # Shared or generic UI components
-│   ├── /Button/                # Button component
-│   ├── /Layout/                # Website layout component
-│   ├── /Link  /                # Link component to be used insted of <a>
-│   └── /...                    # etc.
-├── /core/                      # Core framework
-│   ├── /history.js             # Handles client-side navigation
-│   ├── /router.js              # Handles routing and data fetching
-│   └── /store.js               # Application state manager (Redux)
-├── /node_modules/              # 3rd-party libraries and utilities
-├── /pages/                     # React components for web pages
-│   ├── /about/                 # About page
-│   ├── /error/                 # Error page
-│   ├── /home/                  # Home page
-│   └── /...                    # etc.
-├── /public/                    # Static files such as favicon.ico etc.
-│   ├── /dist/                  # The folder for compiled output
-│   ├── favicon.ico             # Application icon to be displayed in bookmarks
-│   ├── robots.txt              # Instructions for search engine crawlers
-│   └── /...                    # etc.
-├── /test/                      # Unit and integration tests
-├── /utils/                     # Utility and helper classes
-│── main.js                     # React application entry point
-│── package.json                # The list of project dependencies and NPM scripts
-│── routes.json                 # This list of application routes
-│── run.js                      # Build automation script, e.g. `node run build`
-└── webpack.config.js           # Bundling and optimization settings for Webpack
-```
+[![Rollbar - Full-stack error tracking for all apps in any language](https://koistya.github.io/files/rsk/rollbar.png)](https://rollbar.com/?utm_source=reactstartkit(github)&utm_medium=link&utm_campaign=reactstartkit(github)) &nbsp;&nbsp;
+[![Localize - Translate your web app in minutes](https://koistya.github.io/files/rsk/localize.png)](https://localizejs.com/?cid=802&utm_source=rsk)
 
 
 ### Getting Started
 
-**Step 1**. Make sure that you have [Node.js](https://nodejs.org/) v6 or newer installed on your
-machine.
-
-**Step 2**. Clone this repository or use [Yeoman
-generator](https://github.com/kriasoft/react-static-boilerplate/tree/generator-react-static) to
-bootstrap your project:
-
-```shell
-$ git clone -o react-static-boilerplate -b master --single-branch \
-      https://github.com/kriasoft/react-static-boilerplate.git MyApp
-$ cd MyApp
-$ npm install                   # Install project dependencies listed in package.json
-```
-
-<p align="center">——— or ———</p>
-
-```shell
-$ npm install -g yo
-$ npm install -g generator-react-static
-$ mkdir MyApp
-$ cd MyApp
-$ yo react-static
-```
-
-**Step 3**. Compile and launch your app by running:
-
-```shell
-$ node run                      # Same as `npm start` or `node run start`
-```
-
-You can also test your app in release (production) mode by running `node run start --release` or
-with HMR and React Hot Loader disabled by running `node run start --no-hmr`. The app should become
-available at [http://localhost:3000/](http://localhost:3000/).
+  * Follow the [getting started guide](./docs/getting-started.md) to download and run the project
+    ([node](https://nodejs.org/) >= 6,
+    **[node-gyp](https://github.com/nodejs/node-gyp#readme)**
+    and **[prerequisites](https://github.com/nodejs/node-gyp#installation)**)
+  * Check the [code recipes](./docs/recipes) used in this boilerplate, or share yours
 
 
-### How to Test
+### Customization
 
-The unit tests are powered by [chai](http://chaijs.com/) and [mocha](http://mochajs.org/).
+The `master` branch of React Starter Kit doesn't include a Flux implementation or any other
+advanced integrations. Nevertheless, we have some integrations available to you in *feature*
+branches that you can use either as a reference or merge into your project:
 
-```shell
-$ npm run lint                  # Check JavaScript and CSS code for potential issues
-$ npm run test                  # Run unit tests. Or, `npm run test:watch`
-```
+  * [feature/redux](https://github.com/kriasoft/react-starter-kit/tree/feature/redux) — isomorphic
+    Redux by [Pavel Lang](https://github.com/langpavel)
+    (see [how to integrate Redux](./docs/recipes/how-to-integrate-redux.md)) (based on `master`)
+  * [feature/react-intl](https://github.com/kriasoft/react-starter-kit/tree/feature/react-intl) —
+    isomorphic Redux and React Intl by [Pavel Lang](https://github.com/langpavel)
+    (see [how to integrate React Intl](./docs/recipes/how-to-integrate-react-intl.md)) (based on `feature/redux`)
+  * [feature/bootstrap3](https://github.com/kriasoft/react-starter-kit/tree/feature/bootstrap3) —
+    Simplest possible integration of [react-bootstrap](https://react-bootstrap.github.io/)
+    by [Pavel Lang](https://github.com/langpavel) (based on `master`)
 
-
-### How to Deploy
-
-Update `publish` script in the [`run.js`](run.js) file with your full Firebase project name as found
-in your [Firebase console](https://console.firebase.google.com/). Note that this may have an
-additional identifier suffix than the shorter name you've provided. Then run: 
-
-```shell
-$ node run publish              # Build and publish the website to Firebase, same as `npm run publish`
-```
-
-The first time you publish, you will be prompted to authenticate with Google and generate an
-authentication token in order for the publish script to continue.
-
-![publish](https://koistya.github.io/files/react-static-boilerplate-publish.gif)
-
-If you need just to build the project without publishing it, run:
-
-```shell
-$ node run build                # Or, `node run build --release` for production build
-```
+If you think that any of these features should be on `master`, or vice versa, some features should
+removed from the `master` branch, please [let us know](https://gitter.im/kriasoft/react-starter-kit).
+We love your feedback!
 
 
-### How to Update
+### Comparison
 
-You can always fetch and merge the recent changes from this repo back into your own project:
+<table width="100%">
+  <tr>
+    <th>&nbsp;</th>
+    <th>
+      <p>React Starter Kit</p>
+      <a href="https://github.com/kriasoft/react-starter-kit"><img src="https://img.shields.io/github/stars/kriasoft/react-starter-kit.svg?style=social&label=~react-starter-kit" height="20"></a>
+      <a href="https://twitter.com/ReactStarter"><img src="https://img.shields.io/twitter/follow/ReactStarter.svg?style=social&label=@ReactStarter" height="20"></a>
+    </th>
+    <th>
+      <p>React Static Boilerplate</p>
+      <a href="https://github.com/kriasoft/react-static-boilerplate"><img src="https://img.shields.io/github/stars/kriasoft/react-static-boilerplate.svg?style=social&label=~react-static-boilerplate" height="20"></a>
+      <a href="https://twitter.com/ReactStatic"><img src="https://img.shields.io/twitter/follow/ReactStatic.svg?style=social&label=@ReactStatic" height="20"></a>
+    </th>
+    <th>
+      <p>ASP.NET Core Starter Kit</p>
+      <a href="https://github.com/kriasoft/aspnet-starter-kit"><img src="https://img.shields.io/github/stars/kriasoft/aspnet-starter-kit.svg?style=social&label=~aspnet-starter-kit" height="20"></a>
+      <a href="https://twitter.com/dotnetreact"><img src="https://img.shields.io/twitter/follow/dotnetreact.svg?style=social&label=@dotnetreact" height="20"></a>
+    </th>
+  <tr>
+  <tr>
+    <th align="right">App type</th>
+    <td align="center"><a href="http://nerds.airbnb.com/isomorphic-javascript-future-web-apps/">Isomorphic</a> (universal)</td>
+    <td align="center"><a href="https://en.wikipedia.org/wiki/Single-page_application">Single-page application</a></td>
+    <td align="center"><a href="https://en.wikipedia.org/wiki/Single-page_application">Single-page application</a></td>
+  </tr>
+  <tr>
+    <th colspan="4">Frontend</th>
+  <tr>
+  <tr>
+    <th align="right">Language</th>
+    <td align="center">JavaScript (ES2015+, JSX)</td>
+    <td align="center">JavaScript (ES2015+, JSX)</td>
+    <td align="center">JavaScript (ES2015+, JSX)</td>
+  </tr>
+  <tr>
+    <th align="right">Libraries</th>
+    <td align="center">
+      <a href="https://github.com/facebook/react">React</a>,
+      <a href="https://github.com/ReactJSTraining/history">History</a>,
+      <a href="https://github.com/kriasoft/universal-router">Universal Router</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/facebook/react">React</a>,
+      <a href="https://github.com/ReactJSTraining/history">History</a>,
+      <a href="https://github.com/reactjs/redux">Redux</a>
+    </td>
+    <td align="center">
+      <a href="https://github.com/facebook/react">React</a>,
+      <a href="https://github.com/ReactJSTraining/history">History</a>,
+      <a href="https://github.com/reactjs/redux">Redux</a>
+    </td>
+  </tr>
+  <tr>
+    <th align="right">Routes</th>
+    <td align="center">Imperative (functional)</td>
+    <td align="center">Declarative</td>
+    <td align="center">Declarative, cross-stack</td>
+  </tr>
+  <tr>
+    <th colspan="4">Backend</th>
+  <tr>
+  <tr>
+    <th align="right">Language</th>
+    <td align="center">JavaScript (ES2015+, JSX)</td>
+    <td align="center">n/a</td>
+    <td align="center">C#, F#</td>
+  </tr>
+  <tr>
+    <th align="right">Libraries</th>
+    <td align="center">
+      <a href="https://nodejs.org">Node.js</a>,
+      <a href="http://expressjs.com/">Express</a>,
+      <a href="http://docs.sequelizejs.com/en/latest/">Sequelize</a>,<br>
+      <a href="https://github.com/graphql/graphql-js">GraphQL</a></td>
+    <td align="center">n/a</td>
+    <td align="center">
+      <a href="https://docs.asp.net/en/latest/">ASP.NET Core</a>,
+      <a href="https://ef.readthedocs.io/en/latest/">EF Core</a>,<br>
+      <a href="https://docs.asp.net/en/latest/security/authentication/identity.html">ASP.NET Identity</a>
+    </td>
+  </tr>
+  <tr>
+    <th align="right"><a href="https://www.quora.com/What-are-the-tradeoffs-of-client-side-rendering-vs-server-side-rendering">SSR</a></th>
+    <td align="center">Yes</td>
+    <td align="center">n/a</td>
+    <td align="center">n/a</td>
+  </tr>
+  <tr>
+    <th align="right">Data API</th>
+    <td align="center"><a href="http://graphql.org/">GraphQL</a></td>
+    <td align="center">n/a</td>
+    <td align="center"><a href="https://docs.asp.net/en/latest/tutorials/first-web-api.html">Web API</a></td>
+  </tr>
+</table>
 
-```shell
-$ git checkout master
-$ git fetch react-static-boilerplate
-$ git merge react-static-boilerplate/master
-$ npm install
-```
+
+### Backers
+
+♥ React Starter Kit? Help us keep it alive by donating funds to cover project
+expenses via [OpenCollective](https://opencollective.com/react-starter-kit) or
+[Bountysource](https://salt.bountysource.com/teams/react-starter-kit)!
+
+<a href="http://www.nekst.me/" target="_blank" title="lehneres">
+  <img src="https://github.com/lehneres.png?size=64" width="64" height="64" alt="lehneres">
+</a>
+<a href="http://www.vidpanel.com/" target="_blank" title="Tarkan Anlar">
+  <img src="https://github.com/tarkanlar.png?size=64" width="64" height="64" alt="Tarkan Anlar">
+</a>
+<a href="https://morten.olsen.io/" target="_blank" title="Morten Olsen">
+  <img src="https://github.com/mortenolsendk.png?size=64" width="64" height="64" alt="Morten Olsen">
+</a>
+<a href="https://twitter.com/adamthomann" target="_blank" title="Adam">
+  <img src="https://github.com/athomann.png?size=64" width="64" height="64" alt="Adam">
+</a>
+<a href="http://dsernst.com/" target="_blank" title="David Ernst">
+  <img src="https://github.com/dsernst.png?size=64" width="64" height="64" alt="David Ernst">
+</a>
+<a href="http://zanehitchcox.com/" target="_blank" title="Zane Hitchcox">
+  <img src="https://github.com/zwhitchcox.png?size=64" width="64" height="64" alt="Zane Hitchcox">
+</a>
+<a href="https://opencollective.com/react-starter-kit" target="_blank">
+  <img src="https://opencollective.com/static/images/become_backer.svg" width="64" height="64" alt="">
+</a>
 
 
 ### How to Contribute
 
 Anyone and everyone is welcome to [contribute](CONTRIBUTING.md) to this project. The best way to
-start is by checking our [open issues](https://github.com/kriasoft/react-static-boilerplate/issues),
-[submit a new issues](https://github.com/kriasoft/react-static-boilerplate/issues/new?labels=bug) or
-[feature request](https://github.com/kriasoft/react-static-boilerplate/issues/new?labels=enhancement),
+start is by checking our [open issues](https://github.com/kriasoft/react-starter-kit/issues),
+[submit a new issues](https://github.com/kriasoft/react-starter-kit/issues/new?labels=bug) or
+[feature request](https://github.com/kriasoft/react-starter-kit/issues/new?labels=enhancement),
 participate in discussions, upvote or downvote the issues you like or dislike, send [pull
 requests](CONTRIBUTING.md#pull-requests).
 
 
-### Related Projects
-
-* [React Starter Kit](https://github.com/kriasoft/react-starter-kit) — Isomorphic web app boilerplate (Node.js, React, GraphQL, Webpack, CSS Modules)
-* [ASP.NET Core Starter Kit](https://github.com/kriasoft/aspnet-starter-kit) — Cross-platform single-page application boilerplate (ASP.NET Core, React, Redux)
-* [Babel Starter Kit](https://github.com/kriasoft/babel-starter-kit) — JavaScript library boilerplate (ES2015, Babel, Rollup, Mocha, Chai, Sinon, Rewire)
-* [Universal Router](https://github.com/kriasoft/universal-router) — Isomorphic router for web and single-page applications (SPA)
-* [History](https://github.com/mjackson/history) — HTML5 History API wrapper library that handle navigation in single-page apps
-
-
 ### Learn More
 
-* [Getting Started with React.js](http://facebook.github.io/react/)
-* [Getting Started with GraphQL and Relay](https://quip.com/oLxzA1gTsJsE)
-* [React.js Questions on StackOverflow](http://stackoverflow.com/questions/tagged/reactjs)
-* [React.js Discussion Board](https://discuss.reactjs.org/)
-* [Learn ES6](https://babeljs.io/docs/learn-es6/), [ES6 Features](https://github.com/lukehoban/es6features#readme)
+  * [Getting Started with React.js](http://facebook.github.io/react/)
+  * [Getting Started with GraphQL and Relay](https://quip.com/oLxzA1gTsJsE)
+  * [React.js Questions on StackOverflow](http://stackoverflow.com/questions/tagged/reactjs)
+  * [React.js Discussion Board](https://discuss.reactjs.org/)
+  * [Flux Architecture for Building User Interfaces](http://facebook.github.io/flux/)
+  * [Enzyme — JavaScript Testing utilities for React](http://airbnb.io/enzyme/)
+  * [Flow — A static type checker for JavaScript](http://flowtype.org/)
+  * [The Future of React](https://github.com/reactjs/react-future)
+  * [Learn ES6](https://babeljs.io/docs/learn-es6/), [ES6 Features](https://github.com/lukehoban/es6features#readme)
+
+
+### Related Projects
+
+  * [GraphQL Starter Kit](https://github.com/kriasoft/graphql-starter-kit) — Boilerplate for building data APIs with Node.js, JavaScript (via Babel) and GraphQL
+  * [Membership Database](https://github.com/membership/membership.db) — SQL schema boilerplate for user accounts, profiles, roles, and auth claims
+  * [Babel Starter Kit](https://github.com/kriasoft/babel-starter-kit) — Boilerplate for authoring JavaScript/React.js libraries
+
+
+### Support
+
+  * [#react-starter-kit](http://stackoverflow.com/questions/tagged/react-starter-kit) on Stack Overflow — Questions and answers
+  * [#react-starter-kit](https://gitter.im/kriasoft/react-starter-kit) on Gitter — Watch announcements, share ideas and feedback
+  * [GitHub issues](https://github.com/kriasoft/react-starter-kit/issues), or [Scrum board](https://waffle.io/kriasoft/react-starter-kit) — File issues, send feature requests
+  * [appear.in/react](https://appear.in/react) — Open hours! Exchange ideas and experiences (React, GraphQL, startups and pet projects)
+  * [@koistya](https://twitter.com/koistya) on [Codementor](https://www.codementor.io/koistya), or [Skype](http://hatscripts.com/addskype?koistya) — Private consulting
 
 
 ### License
 
-Copyright © 2015-present Kriasoft, LLC. This source code is licensed under the MIT license found in
-the [LICENSE.txt](https://github.com/kriasoft/react-static-boilerplate/blob/master/LICENSE.txt) file.
+Copyright © 2014-2016 Kriasoft, LLC. This source code is licensed under the MIT
+license found in the [LICENSE.txt](https://github.com/kriasoft/react-starter-kit/blob/master/LICENSE.txt)
+file. The documentation to the project is licensed under the
+[CC BY-SA 4.0](http://creativecommons.org/licenses/by-sa/4.0/) license.
 
 ---
-Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/kriasoft/react-static-boilerplate/graphs/contributors)
+Made with ♥ by Konstantin Tarkus ([@koistya](https://twitter.com/koistya)) and [contributors](https://github.com/kriasoft/react-starter-kit/graphs/contributors)
+
+[rsk]: https://www.reactstarterkit.com
+[demo]: http://demo.reactstarterkit.com
+[node]: https://nodejs.org
+[chat]: https://gitter.im/kriasoft/react-starter-kit
