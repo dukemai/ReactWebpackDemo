@@ -2,21 +2,12 @@
   "name": "react-universally",
   "version": "12.0.0",
   "description": "A starter kit giving you the minimum requirements for a modern universal react application.",
-  "main": "build/server/index.js",
+  "main": "server/index.js",
   "engines": {
     "node": ">=6"
   },
   "scripts": {
-    "preinstall": "node tools/scripts/preinstall",
-    "clean": "babel-node tools/scripts/clean",
-    "development": "babel-node tools/development",
-    "build": "cross-env NODE_ENV=production babel-node tools/scripts/build",
-    "analyze": "babel-node tools/scripts/analyze",
-    "start": "cross-env NODE_ENV=production node build/server",
-    "deploy": "babel-node tools/scripts/deploy",
-    "lint": "eslint src",
-    "test": "jest",
-    "test:coverage": "jest --coverage"
+    "start": "cross-env NODE_ENV=production node server"    
   },
   "repository": {
     "type": "git",
