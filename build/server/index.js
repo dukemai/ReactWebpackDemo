@@ -104,7 +104,7 @@ const config = {
   host: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__internals_environmentVars__["a" /* getStringEnvVar */])('SERVER_HOST', 'localhost'),
 
   // The port on which the server should run.
-  port: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__internals_environmentVars__["b" /* getIntEnvVar */])('SERVER_PORT', 5000),
+  port: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__internals_environmentVars__["b" /* getIntEnvVar */])('SERVER_PORT', process.env.PORT || 5000),
 
   // The port on which the client bundle development server should run.
   clientDevServerPort: __webpack_require__.i(__WEBPACK_IMPORTED_MODULE_0__internals_environmentVars__["b" /* getIntEnvVar */])('CLIENT_DEVSERVER_PORT', 7331),
