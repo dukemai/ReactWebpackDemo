@@ -654,7 +654,7 @@ app.get('*', __WEBPACK_IMPORTED_MODULE_4__middleware_reactApplication__["a" /* d
 app.use(...__WEBPACK_IMPORTED_MODULE_9__middleware_errorHandlers__["a" /* default */]);
 
 // Create an http listener for our express app.
-const listener = app.listen(__WEBPACK_IMPORTED_MODULE_10__config__["default"].port, __WEBPACK_IMPORTED_MODULE_10__config__["default"].host, () => console.log(`Server listening on port ${ __WEBPACK_IMPORTED_MODULE_10__config__["default"].port }`));
+const listener = app.listen(__WEBPACK_IMPORTED_MODULE_10__config__["default"].port);
 
 // We export the listener as it will be handy for our development hot reloader,
 // or for exposing a general extension layer for application customisations.
