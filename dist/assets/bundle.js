@@ -56,7 +56,7 @@
 
 	var _index2 = _interopRequireDefault(_index);
 
-	var _bulma = __webpack_require__(182);
+	var _bulma = __webpack_require__(183);
 
 	var Bulma = _interopRequireWildcard(_bulma);
 
@@ -21526,6 +21526,10 @@
 
 	var _section2 = _interopRequireDefault(_section);
 
+	var _card = __webpack_require__(182);
+
+	var _card2 = _interopRequireDefault(_card);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
@@ -21558,83 +21562,76 @@
 	        _react2.default.createElement(
 	          _section2.default,
 	          {
-	            Title: 'Provide your project information. We will estimate it.'
+	            Title: 'Provide your project information. We will estimate it.',
+	            SubTitle: 'The more detail you provided, the more accurate we estimate.'
 	          },
 	          _react2.default.createElement(
 	            'div',
-	            { className: 'row' },
+	            { className: 'columns' },
 	            _react2.default.createElement(
-	              'label',
-	              { className: 'label' },
-	              'Name'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'control' },
-	              _react2.default.createElement('input', { className: 'input', type: 'text', placeholder: 'Your Name' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row' },
-	            _react2.default.createElement(
-	              'label',
-	              { className: 'label' },
-	              'Email'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'control' },
-	              _react2.default.createElement('input', { className: 'input', type: 'text', placeholder: 'Your Email' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row' },
-	            _react2.default.createElement(
-	              'label',
-	              { className: 'label' },
-	              'Project You Want To Estimate'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'control' },
-	              _react2.default.createElement('input', { className: 'input', type: 'text', placeholder: 'Project Name' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'row' },
-	            _react2.default.createElement(
-	              'label',
-	              { className: 'label' },
-	              'Project Description'
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'control' },
-	              _react2.default.createElement('textarea', { className: 'textarea', placeholder: 'Describe your project' })
-	            )
-	          ),
-	          _react2.default.createElement(
-	            'div',
-	            { className: 'control is-grouped' },
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'control' },
+	              'div',
+	              { className: 'column is-one-third' },
 	              _react2.default.createElement(
-	                'button',
-	                { className: 'button is-primary' },
-	                'Submit'
-	              )
-	            ),
-	            _react2.default.createElement(
-	              'p',
-	              { className: 'control' },
+	                'label',
+	                { className: 'label' },
+	                'Name'
+	              ),
 	              _react2.default.createElement(
-	                'button',
-	                { className: 'button is-link' },
-	                'Cancel'
+	                'p',
+	                { className: 'control' },
+	                _react2.default.createElement('input', { className: 'input', type: 'text', placeholder: 'Your Name' })
+	              ),
+	              _react2.default.createElement(
+	                'label',
+	                { className: 'label' },
+	                'Email'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'control' },
+	                _react2.default.createElement('input', { className: 'input', type: 'text', placeholder: 'Your Email' })
+	              ),
+	              _react2.default.createElement(
+	                'label',
+	                { className: 'label' },
+	                'Project You Want To Estimate'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'control' },
+	                _react2.default.createElement('input', { className: 'input', type: 'text', placeholder: 'Project Name' })
+	              ),
+	              _react2.default.createElement(
+	                'label',
+	                { className: 'label' },
+	                'Project Description'
+	              ),
+	              _react2.default.createElement(
+	                'p',
+	                { className: 'control' },
+	                _react2.default.createElement('textarea', { className: 'textarea', placeholder: 'Describe your project' })
+	              ),
+	              _react2.default.createElement(
+	                'div',
+	                { className: 'control is-grouped' },
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'control' },
+	                  _react2.default.createElement(
+	                    'button',
+	                    { className: 'button is-primary' },
+	                    'Submit'
+	                  )
+	                ),
+	                _react2.default.createElement(
+	                  'p',
+	                  { className: 'control' },
+	                  _react2.default.createElement(
+	                    'button',
+	                    { className: 'button is-link' },
+	                    'Cancel'
+	                  )
+	                )
 	              )
 	            )
 	          )
@@ -21904,6 +21901,106 @@
 
 /***/ },
 /* 182 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	    value: true
+	});
+
+	var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+	var _react = __webpack_require__(1);
+
+	var _react2 = _interopRequireDefault(_react);
+
+	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
+
+	function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+	function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+	function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
+	var Card = function (_Component) {
+	    _inherits(Card, _Component);
+
+	    function Card() {
+	        _classCallCheck(this, Card);
+
+	        return _possibleConstructorReturn(this, (Card.__proto__ || Object.getPrototypeOf(Card)).apply(this, arguments));
+	    }
+
+	    _createClass(Card, [{
+	        key: "render",
+	        value: function render() {
+	            var titleBlock = void 0,
+	                subTitleBlock = void 0;
+	            if (this.props.Title) {
+	                titleBlock = _react2.default.createElement(
+	                    "header",
+	                    { className: "card-header" },
+	                    _react2.default.createElement(
+	                        "p",
+	                        { className: "card-header-title" },
+	                        this.props.Title
+	                    )
+	                );
+	            } else {
+	                titleBlock = '';
+	            }
+
+	            return _react2.default.createElement(
+	                "div",
+	                { className: "card" },
+	                titleBlock,
+	                _react2.default.createElement(
+	                    "div",
+	                    { className: "card-content" },
+	                    _react2.default.createElement(
+	                        "div",
+	                        { className: "content" },
+	                        this.props.Content
+	                    )
+	                ),
+	                _react2.default.createElement(
+	                    "footer",
+	                    { className: "card-footer" },
+	                    _react2.default.createElement(
+	                        "a",
+	                        { className: "card-footer-item" },
+	                        "Save"
+	                    ),
+	                    _react2.default.createElement(
+	                        "a",
+	                        { className: "card-footer-item" },
+	                        "Edit"
+	                    ),
+	                    _react2.default.createElement(
+	                        "a",
+	                        { className: "card-footer-item" },
+	                        "Delete"
+	                    )
+	                )
+	            );
+	        }
+	    }]);
+
+	    return Card;
+	}(_react.Component);
+
+	exports.default = Card;
+
+
+	Card.propTypes = {
+	    Title: _react.PropTypes.string,
+	    Content: _react.PropTypes.string,
+	    Color: _react.PropTypes.string
+	};
+
+/***/ },
+/* 183 */
 /***/ function(module, exports) {
 
 	// removed by extract-text-webpack-plugin
