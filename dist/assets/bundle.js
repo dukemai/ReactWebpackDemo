@@ -21617,7 +21617,8 @@
 	            _react2.default.createElement(
 	              "h2",
 	              { className: "subtitle" },
-	              this.props.SubTitle
+	              this.props.SubTitle,
+	              this.props.Children
 	            )
 	          )
 	        )
@@ -21634,7 +21635,8 @@
 	Hero.propTypes = {
 	  Title: _react.PropTypes.string,
 	  SubTitle: _react.PropTypes.string,
-	  Color: _react.PropTypes.string
+	  Color: _react.PropTypes.string,
+	  Children: _react.PropTypes.children
 	};
 
 /***/ },

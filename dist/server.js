@@ -223,7 +223,8 @@ module.exports =
 	            _react2.default.createElement(
 	              "h2",
 	              { className: "subtitle" },
-	              this.props.SubTitle
+	              this.props.SubTitle,
+	              this.props.Children
 	            )
 	          )
 	        )
@@ -240,7 +241,8 @@ module.exports =
 	Hero.propTypes = {
 	  Title: _react.PropTypes.string,
 	  SubTitle: _react.PropTypes.string,
-	  Color: _react.PropTypes.string
+	  Color: _react.PropTypes.string,
+	  Children: _react.PropTypes.children
 	};
 
 /***/ },
@@ -346,7 +348,7 @@ module.exports =
 	      title = _ref.title,
 	      initialState = _ref.initialState;
 
-	  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <script>window.__APP_INITIAL_STATE__ = " + initialState + "</script>\n        <title>" + title + "</title>\n        <link rel=\"stylesheet\" href=\"/assets/index.css\" />\n      </head>\n      \n      <body>\n        <div id=\"root\" className=\"container\">\n          " + body + "\n        </div>        \n      </body>\n      \n      <script src=\"/assets/bundle.js\"></script>\n    </html>\n  ";
+	  return "\n    <!DOCTYPE html>\n    <html>\n      <head>\n        <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n        <meta charset=\"utf-8\">\n        <meta http-equiv=\"X-UA-Compatible\" content=\"IE=edge\">\n        <meta name=\"description\" content=\"Estimations.co, we estimate software projects\">\n        <title>" + title + "</title>\n        <link rel=\"stylesheet\" href=\"/assets/index.css\" />\n      </head>\n      \n      <body>\n        <div id=\"root\" class=\"container\">\n          " + body + "\n        </div>        \n      </body>\n      \n      <script src=\"/assets/bundle.js\"></script>\n    </html>\n  ";
 	};
 
 /***/ }
